@@ -2,7 +2,9 @@
 
 **Cryptographic governance.**
 
-OrgForge is a system that enforces organizational rules at the moment actions occur, using cryptographic authorization instead of procedural trust.
+OrgForge enforces organizational rules at the moment actions occur, using cryptographic authorization instead of procedural trust.
+
+The underlying protocol is called orgfrg.
 
 ---
 
@@ -18,27 +20,29 @@ orgfrg makes authorization trustless.
 
 ## How it works
 
-Actors submit an **intent** describing the action they want to perform. OrgForge evaluates that intent against an **OrgSpec**, a machine-readable organizational constitution. If the rules are satisfied, OrgForge issues a signed **authorization artifact**. Execution systems verify that artifact before acting.
+Actors submit an **intent** describing the action they want to perform. orgfrg evaluates that intent against an **OrgSpec**, a machine-readable organizational constitution. If the rules are satisfied, orgfrg issues a signed **authorization artifact**. Execution systems verify that artifact before acting.
 
 The pipeline is deterministic:
 
-Actor → Intent → OrgForge evaluation → Signed authorization artifact → Execution system verifies → Action executes.
+Actor → Intent → orgfrg evaluation → Signed authorization artifact → Execution system verifies → Action executes.
 
 No proof, no action.
+
+This allows organizational rules to control payments, deployments, tool calls, treasury actions, and other governed actions before execution.
 
 ---
 
 ## What OrgSpec can encode
 
-Spending limits. Multi-approval thresholds. Role-based permissions. Rate limits for autonomous agents. Allowed markets and tool access. Operational states such as freeze, audit, and incident mode. Agent-specific restrictions.
+Spending limits. Multi-approval thresholds. Role-based permissions. Rate limits for automated systems. Allowed markets and tool access. Operational states such as freeze, audit, and incident mode. Agent-specific restrictions.
 
 ---
 
 ## Status
 
-Active development. The protocol engine is locked at 831 of 831 tests passing for Sprint 1 of the A.5 milestone. The platform and SDKs are in active build.
+Active development. The protocol engine is under active test coverage across the authorization, verification, OrgSpec, and audit layers. The platform and SDKs are in active build.
 
-Source repositories will be made public after patent conversion. Until then, the protocol specification, whitepaper, and architecture are available through the authoritative documents below.
+Source repositories are not yet public while patent strategy remains active. Public specifications and documents are available through the authoritative links below.
 
 ---
 
@@ -52,11 +56,11 @@ Source repositories will be made public after patent conversion. Until then, the
 
 ## Intellectual property
 
-U.S. Provisional Patent Applications 63/995,907 (filed March 4, 2026) and 64/002,607 (filed March 11, 2026). Additional applications pending.
+U.S. Provisional Patent Applications 63/995,907 (filed March 4, 2026) and 64/002,607 (filed March 11, 2026). Additional filings are under evaluation.
 
 "OrgForge" and "orgfrg" are trademarks of OrgForge, Inc. U.S. Trademark Serial No. 99710648.
 
-Source code, when released, will be licensed under Apache License 2.0.
+Source code, when released, is expected to be licensed under Apache License 2.0.
 
 ---
 
